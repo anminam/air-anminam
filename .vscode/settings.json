@@ -1,5 +1,11 @@
 {
     "python.pythonPath": "C:\\Users\\minam\\.virtualenvs\\airanminam-uaYs3i9t\\Scripts\\python.exe",
     "python.linting.flake8Enabled": true,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.formatting.provider": "black",
+    "python.linting.flake8Args": [
+        "--max-line-length=88"
+    ],
+    "editor.formatOnSave": true
 }
