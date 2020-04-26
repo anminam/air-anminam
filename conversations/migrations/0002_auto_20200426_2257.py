@@ -11,13 +11,18 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('lists', '0002_list_rooms'),
+        ('conversations', '0001_initial'),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='list',
+            model_name='message',
             name='user',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
+        ),
+        migrations.AddField(
+            model_name='conversation',
+            name='participants',
+            field=models.ManyToManyField(blank=True, to=settings.AUTH_USER_MODEL),
         ),
     ]
